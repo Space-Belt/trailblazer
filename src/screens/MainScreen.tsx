@@ -1,7 +1,7 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 import {StyleSheet} from 'react-native';
-import MainStackNavigator from '../navigations/MainStackNavigator';
+import BottomStackNavigator from '../navigations/BottomStackNavigator';
 
 const RootStack = createStackNavigator();
 
@@ -10,7 +10,10 @@ const MainScreen = () => {
     <RootStack.Navigator
       initialRouteName="MainStack"
       screenOptions={{headerShown: false}}>
-      <RootStack.Screen name="MainStack" component={MainStackNavigator} />
+      <RootStack.Screen
+        name="BottomStackNavigator"
+        component={BottomStackNavigator}
+      />
     </RootStack.Navigator>
   );
 };
